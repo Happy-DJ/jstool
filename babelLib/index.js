@@ -84,6 +84,7 @@ module.exports = {
     scrollTo,
     setScrollTop,
     windowResize,
+
     prefixStyle,
 
     debounce,

@@ -8,9 +8,9 @@ const rootPath = path.resolve(__dirname, '../')
 const config = {
     entry: path.resolve(rootPath, 'src', 'index.js'),
     output: {
-        filename: `${pkg.name}.min.js`,
+        filename: `${pkg.minName}.min.js`,
         path: path.resolve(rootPath, 'min'),
-        library: `${pkg.name}`,
+        library: `${pkg.minName}`,
         libraryTarget: "umd"
     },
     module: {

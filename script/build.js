@@ -14,7 +14,7 @@ new Promise((resolve, reject) => {
     // 构建全量压缩包
     let building = ora('building...')
     building.start()
-    rm(path.resolve(rootPath, 'min', 'jstools.min.js'), err => {
+    rm(path.resolve(rootPath, 'min', `${pkg.minName}.min.js`), err => {
         if (err) throw (err)
         webpack(config, function (err, stats) {
             if (err) throw (err)

@@ -11,7 +11,6 @@ const cookieApi = require('./cookie/cookie')
 const shuffle =  require('./collections/shuffle')
 
 
-
 const getOS = require('./device/getOS')
 const isWeixin = require('./device/isWeixin')
 const getType = require('./device/getType')
@@ -90,6 +89,7 @@ module.exports = {
     scrollTo,
     setScrollTop,
     windowResize,
+
     prefixStyle,
 
     debounce,

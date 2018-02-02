@@ -1,8 +1,8 @@
 # outils
 
-[![Build Status](https://travis-ci.org/proYang/outils.svg?branch=master) ![LICENSE MIT](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/outils)
+[![LICENSE MIT](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/dj-jstools)
 
- 
+
 前端业务代码工具库  
 
 > 目的：高效率完成前端业务代码
@@ -11,27 +11,27 @@
 
 ## 安装使用
 
-1. 直接下载`min`目录下的[outils.min.js](https://github.com/Hack-DJ/outils/blob/master/min/outils.min.js)使用，支持UMD通用模块规范  
+1. 直接下载`min`目录下的[jstools.min.js](https://github.com/Hack-DJ/jstool/blob/master/min/jstools.min.js)使用，支持UMD通用模块规范
 2. 使用npm安装
 
 ### 浏览器:
 ``` html
-  <script src="outils.min.js"></script>
+  <script src="jstools.min.js"></script>
   <script>
-      var OS = outils.getOS()
+      var OS = jstools.getOS()
   </script>
 ```
 
 ### npm:
 ``` bash
-$ npm install --save-dev outils
+$ npm install --save-dev dj-jstools
 ```
 
 webpack、RequireJS、SeaJS等
 
 ``` javascript
 // 完整引入
-const outils = require('outils')
+const outils = require('dj-jstools')
 const OS = outils.getOS()
 ```
 
@@ -39,11 +39,15 @@ const OS = outils.getOS()
 
 你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
 ``` javascript
-// 只引入部分方法('outils/static/<方法名>')
-const getOS = require('outils/static/getOS')
+// 只引入部分方法('dj-jstools/static/<方法名>')
+const getOS = require('dj-jstools/static/getOS')
 const OS = getOS()
 ```
 
+**项目构建**
+### 编译ES6转ES5 npm run jsBabel
+### 重新编译脚本  npm run build
+### 测试代码  npm run test
 
 
 
@@ -87,6 +91,7 @@ const OS = getOS()
 #### &emsp;&emsp;[mobileType][mobileType]&emsp;&emsp;手机类型
 
 ### Dom  
+#### &emsp;&emsp;[scrollApi][scrollApi]&emsp;&emsp;scroll滚动方法
 #### &emsp;&emsp;[getScrollTop][getScrollTop]&emsp;&emsp;获取滚动条距顶部的距离
 #### &emsp;&emsp;[offset][offset]&emsp;&emsp;获取一个元素的距离文档(document)的位置，类似jQ中的offset()
 #### &emsp;&emsp;[scrollTo][scrollTo]&emsp;&emsp;在${duration}时间内，滚动条平滑滚动到${to}指定位置
@@ -128,10 +133,10 @@ const OS = getOS()
 
 ### Stroge
 #### &emsp;&emsp;[Stroge][localStorageApi]&emsp;&emsp;缓存
-#### &emsp;&emsp;[Stroge][localStorageApi][set]&emsp;&emsp;设置缓存，缓存过期时间
-#### &emsp;&emsp;[Stroge][localStorageApi][get]&emsp;&emsp;读取缓存
-#### &emsp;&emsp;[Stroge][localStorageApi][remove]&emsp;&emsp;删除指定缓存
-#### &emsp;&emsp;[Stroge][localStorageApi][clearv]&emsp;&emsp;清空所有缓存
+#### &emsp;&emsp;localStorageApi.set&emsp;&emsp;设置缓存，缓存过期时间
+#### &emsp;&emsp;localStorageApi.get&emsp;&emsp;读取缓存
+#### &emsp;&emsp;localStorageApi.remove&emsp;&emsp;删除指定缓存
+#### &emsp;&emsp;localStorageApi.clearv&emsp;&emsp;清空所有缓存
 
 
 ### Support  
