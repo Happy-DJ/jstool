@@ -1,9 +1,9 @@
-# outils
+# jstool
 
 [![LICENSE MIT](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/dj-jstools)
 
 
-前端业务代码工具库  
+前端业务代码工具库
 
 > 目的：高效率完成前端业务代码
 
@@ -31,11 +31,11 @@ webpack、RequireJS、SeaJS等
 
 ``` javascript
 // 完整引入
-const outils = require('dj-jstools')
-const OS = outils.getOS()
+const jstool = require('dj-jstools')
+const OS = jstool.getOS()
 ```
 
-**推荐使用方法**  
+**推荐使用方法**
 
 你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
 ``` javascript
@@ -57,8 +57,8 @@ const OS = getOS()
 
 ## API文档
 
-### Array  
-#### &emsp;&emsp;[arrayEqual][arrayEqual]&emsp;&emsp;判断两个数组是否相等 
+### Array
+#### &emsp;&emsp;[arrayEqual][arrayEqual]&emsp;&emsp;判断两个数组是否相等
 
 ### Class
 #### &emsp;&emsp;[classApi][classApi]&emsp;&emsp;className的操作api
@@ -83,14 +83,14 @@ const OS = getOS()
 ##### &emsp;&emsp;&emsp;&emsp;cookieApi.remove(name)根据name删除Cookie
 ##### &emsp;&emsp;&emsp;&emsp;cookieApi.keys()   获取cookieKeys列表
 
-### Device  
-#### &emsp;&emsp;[getExplore][getExplore]&emsp;&emsp;获取浏览器类型和版本号  
+### Device
+#### &emsp;&emsp;[getExplore][getExplore]&emsp;&emsp;获取浏览器类型和版本号
 #### &emsp;&emsp;[getOS][getOS]&emsp;&emsp;获取操作系统类型
 #### &emsp;&emsp;[isWeixin][isWeixin]&emsp;&emsp;是否微信内置浏览器
 #### &emsp;&emsp;[getType][getType]&emsp;&emsp;是否手机
 #### &emsp;&emsp;[mobileType][mobileType]&emsp;&emsp;手机类型
 
-### Dom  
+### Dom
 #### &emsp;&emsp;[scrollApi][scrollApi]&emsp;&emsp;scroll滚动方法
 #### &emsp;&emsp;[getScrollTop][getScrollTop]&emsp;&emsp;获取滚动条距顶部的距离
 #### &emsp;&emsp;[offset][offset]&emsp;&emsp;获取一个元素的距离文档(document)的位置，类似jQ中的offset()
@@ -101,26 +101,26 @@ const OS = getOS()
 ### prefixStyle
 #### &emsp;&emsp;[prefixStyle][prefixStyle]&emsp;&emsp;prefixStyle css针对不同浏览器加前缀
 
-### Function  
-#### &emsp;&emsp;[debounce][debounce]&emsp;&emsp;函数防抖   
-#### &emsp;&emsp;[throttle][throttle]&emsp;&emsp;函数节流   
+### Function
+#### &emsp;&emsp;[debounce][debounce]&emsp;&emsp;函数防抖
+#### &emsp;&emsp;[throttle][throttle]&emsp;&emsp;函数节流
 
-### Keycode  
-#### &emsp;&emsp;[getKeyName][getKeyName]&emsp;&emsp;根据keycode获得键名 
+### Keycode
+#### &emsp;&emsp;[getKeyName][getKeyName]&emsp;&emsp;根据keycode获得键名
 
-### Object  
+### Object
 #### &emsp;&emsp;[deepClone][deepClone]&emsp;&emsp;深拷贝，支持常见类型
 #### &emsp;&emsp;[isEmptyObject][isEmptyObject]&emsp;&emsp;判断Object是否为空
 #### &emsp;&emsp;[isEmpty][isEmpty]&emsp;&emsp;判断变量是否为空
 
-### Random  
+### Random
 #### &emsp;&emsp;[randomColor][randomColor] &emsp;&emsp;随机生成颜色
-#### &emsp;&emsp;[randomNum][randomNum]&emsp;&emsp;生成指定范围随机数 
+#### &emsp;&emsp;[randomNum][randomNum]&emsp;&emsp;生成指定范围随机数
 
-### Regexp  
-#### &emsp;&emsp;[isEmail][isEmail]&emsp;&emsp;判断是否为邮箱地址 
+### Regexp
+#### &emsp;&emsp;[isEmail][isEmail]&emsp;&emsp;判断是否为邮箱地址
 #### &emsp;&emsp;[isIdCard][isIdCard]&emsp;&emsp;判断是否为身份证号
-#### &emsp;&emsp;[isPhoneNum][isPhoneNum]&emsp;&emsp;判断是否为手机号  
+#### &emsp;&emsp;[isPhoneNum][isPhoneNum]&emsp;&emsp;判断是否为手机号
 #### &emsp;&emsp;[isUrl][isUrl]&emsp;&emsp;判断是否为URL地址
 #### &emsp;&emsp;[priceSubstr][priceSubstr]&emsp;&emsp;千，万位分割
 
@@ -128,7 +128,7 @@ const OS = getOS()
 #### &emsp;&emsp;[secretInfo][secretInfo]&emsp;&emsp;隐私信息加密
 
 
-### String  
+### String
 #### &emsp;&emsp;[digitUppercase][digitUppercase]&emsp;&emsp;现金额转大写
 
 ### Stroge
@@ -139,11 +139,11 @@ const OS = getOS()
 #### &emsp;&emsp;localStorageApi.clearv&emsp;&emsp;清空所有缓存
 
 
-### Support  
+### Support
 #### &emsp;&emsp;[isSupportWebP][isSupportWebP]&emsp;&emsp;判断浏览器是否支持webP格式图片
-#### 
+####
 
-### Time  
+### Time
 #### &emsp;&emsp;[formatPassTime][formatPassTime]&emsp;&emsp;格式化${startTime}距现在的已过时间
 #### &emsp;&emsp;[formatRemainTime][formatRemainTime]&emsp;&emsp;格式化现在距${endTime}的剩余时间
 #### &emsp;&emsp;[formatUnixTime][formatUnixTime]&emsp;&emsp;格式化时间错位年月日
@@ -157,63 +157,66 @@ const OS = getOS()
 #### &emsp;&emsp;[type][typeOf]&emsp;&emsp;判断类型
 
 
-[arrayEqual]:https://github.com/Hack-DJ/outils/blob/master/src/array/arrayEqual.js
+[arrayEqual]:https://github.com/Hack-DJ/jstool/blob/master/src/array/arrayEqual.js
 
-[classApi]:https://github.com/Hack-DJ/outils/blob/master/src/class/classApi.js
+[classApi]:https://github.com/Hack-DJ/jstool/blob/master/src/class/classApi.js
 
-[cookieApi]:https://github.com/Hack-DJ/outils/blob/master/src/cookie/cookie.js
+[cookieApi]:https://github.com/Hack-DJ/jstool/blob/master/src/cookie/cookie.js
 
-[shuffle]:https://github.com/Hack-DJ/outils/blob/master/src/collections/shuffle.js
+[shuffle]:https://github.com/Hack-DJ/jstool/blob/master/src/collections/shuffle.js
 
-[getExplore]:https://github.com/Hack-DJ/outils/blob/master/src/device/getExplore.js
-[getOS]:https://github.com/Hack-DJ/outils/blob/master/src/device/getOS.js
-[getType]:https://github.com/Hack-DJ/outils/blob/master/src/device/getType.js
-[isWerixin]:https://github.com/Hack-DJ/outils/blob/master/src/device/isWerixin.js
-[mobileType]:https://github.com/Hack-DJ/outils/blob/master/src/device/mobileType.js
+[getExplore]:https://github.com/Hack-DJ/jstool/blob/master/src/device/getExplore.js
+[getOS]:https://github.com/Hack-DJ/jstool/blob/master/src/device/getOS.js
+[getType]:https://github.com/Hack-DJ/jstool/blob/master/src/device/getType.js
+[isWerixin]:https://github.com/Hack-DJ/jstool/blob/master/src/device/isWeixin.js
+[mobileType]:https://github.com/Hack-DJ/jstool/blob/master/src/device/mobileType.js
 
-[scrollApi]:https://github.com/Hack-DJ/outils/blob/master/src/dom/scrollApi.js
-[getScrollTop]:https://github.com/Hack-DJ/outils/blob/master/src/dom/getScrollTop.js
-[offset]:https://github.com/Hack-DJ/outils/blob/master/src/dom/offset.js
-[scrollTo]:https://github.com/Hack-DJ/outils/blob/master/src/dom/scrollTo.js
-[setScrollTop]:https://github.com/Hack-DJ/outils/blob/master/src/dom/setScrollTop.js
-[windowResize]:https://github.com/Hack-DJ/outils/blob/master/src/dom/windowResize.js
+[getScrollTop]:https://github.com/Hack-DJ/jstool/blob/master/src/dom/getScrollTop.js
+[offset]:https://github.com/Hack-DJ/jstool/blob/master/src/dom/offset.js
+[scrollTo]:https://github.com/Hack-DJ/jstool/blob/master/src/dom/scrollTo.js
+[setScrollTop]:https://github.com/Hack-DJ/jstool/blob/master/src/dom/setScrollTop.js
+[windowResize]:https://github.com/Hack-DJ/jstool/blob/master/src/dom/windowResize.js
 
-[prefixStyle]:https://github.com/Hack-DJ/outils/blob/master/src/prefixStyle/prefixStyle.js
 
-[debounce]:https://github.com/Hack-DJ/outils/blob/master/src/function/debounce.js
-[throttle]:https://github.com/Hack-DJ/outils/blob/master/src/function/throttle.js
+[scrollApi]:https://github.com/Hack-DJ/jstool/blob/master/src/stroge/localStorage.js
 
-[getKeyName]:https://github.com/Hack-DJ/outils/blob/master/src/keycode/getKeyName.js
 
-[deepClone]:https://github.com/Hack-DJ/outils/blob/master/src/object/deepClone.js
-[isEmptyObject]:https://github.com/Hack-DJ/outils/blob/master/src/object/isEmptyObject.js
-[isEmpty]:https://github.com/Hack-DJ/outils/blob/master/src/object/isEmpty.js
+[prefixStyle]:https://github.com/Hack-DJ/jstool/blob/master/src/prefixStyle/prefixStyle.js
 
-[randomColor]:https://github.com/Hack-DJ/outils/blob/master/src/random/randomColor.js
-[randomNum]:https://github.com/Hack-DJ/outils/blob/master/src/random/randomNum.js
+[debounce]:https://github.com/Hack-DJ/jstool/blob/master/src/function/debounce.js
+[throttle]:https://github.com/Hack-DJ/jstool/blob/master/src/function/throttle.js
 
-[isEmail]:https://github.com/Hack-DJ/outils/blob/master/src/regexp/isEmail.js
-[isIdCard]:https://github.com/Hack-DJ/outils/blob/master/src/regexp/isIdCard.js
-[isPhoneNum]:https://github.com/Hack-DJ/outils/blob/master/src/regexp/isPhoneNum.js
-[isUrl]:https://github.com/Hack-DJ/outils/blob/master/src/regexp/isUrl.js
-[priceSubstr]:https://github.com/Hack-DJ/outils/blob/master/src/regexp/priceSubstr.js
+[getKeyName]:https://github.com/Hack-DJ/jstool/blob/master/src/keycode/getKeyName.js
 
-[secretInfo]:https://github.com/Hack-DJ/outils/blob/master/src/secret/secretInfo.js
+[deepClone]:https://github.com/Hack-DJ/jstool/blob/master/src/object/deepClone.js
+[isEmptyObject]:https://github.com/Hack-DJ/jstool/blob/master/src/object/isEmptyObject.js
+[isEmpty]:https://github.com/Hack-DJ/jstool/blob/master/src/object/isEmpty.js
 
-[digitUppercase]:https://github.com/Hack-DJ/outils/blob/master/src/string/digitUppercase.js
+[randomColor]:https://github.com/Hack-DJ/jstool/blob/master/src/random/randomColor.js
+[randomNum]:https://github.com/Hack-DJ/jstool/blob/master/src/random/randomNum.js
 
-[isSupportWebP]:https://github.com/Hack-DJ/outils/blob/master/src/support/isSupportWebP.js
+[isEmail]:https://github.com/Hack-DJ/jstool/blob/master/src/regexp/isEmail.js
+[isIdCard]:https://github.com/Hack-DJ/jstool/blob/master/src/regexp/isIdCard.js
+[isPhoneNum]:https://github.com/Hack-DJ/jstool/blob/master/src/regexp/isPhoneNum.js
+[isUrl]:https://github.com/Hack-DJ/jstool/blob/master/src/regexp/isUrl.js
+[priceSubstr]:https://github.com/Hack-DJ/jstool/blob/master/src/regexp/priceSubstr.js
 
-[localStorage]:https://github.com/Hack-DJ/outils/blob/master/src/stroge/localStorage.js
+[secretInfo]:https://github.com/Hack-DJ/jstool/blob/master/src/secret/secretInfo.js
 
-[isSupportWebP]:https://github.com/Hack-DJ/outils/blob/master/src/support/isSupportWebP.js
+[digitUppercase]:https://github.com/Hack-DJ/jstool/blob/master/src/string/digitUppercase.js
 
-[formatPassTime]:https://github.com/Hack-DJ/outils/blob/master/src/time/formatPassTime.js
-[formatRemainTime]:https://github.com/Hack-DJ/outils/blob/master/src/time/formatRemainTime.js
-[formatTime]:https://github.com/Hack-DJ/outils/blob/master/src/time/formatTime.js
-[formatUnixTime]:https://github.com/Hack-DJ/outils/blob/master/src/time/formatUnixTime.js
+[isSupportWebP]:https://github.com/Hack-DJ/jstool/blob/master/src/support/isSupportWebP.js
 
-[typeOf]:https://github.com/Hack-DJ/outils/blob/master/src/type/typeOf.js
+[localStorage]:https://github.com/Hack-DJ/jstool/blob/master/src/stroge/localStorage.js
 
-[parseQueryString]:https://github.com/Hack-DJ/outils/blob/master/src/url/parseQueryString.js
-[stringfyQueryString]:https://github.com/Hack-DJ/outils/blob/master/src/url/stringfyQueryString.js
+[isSupportWebP]:https://github.com/Hack-DJ/jstool/blob/master/src/support/isSupportWebP.js
+
+[formatPassTime]:https://github.com/Hack-DJ/jstool/blob/master/src/time/formatPassTime.js
+[formatRemainTime]:https://github.com/Hack-DJ/jstool/blob/master/src/time/formatRemainTime.js
+[formatTime]:https://github.com/Hack-DJ/jstool/blob/master/src/time/formatTime.js
+[formatUnixTime]:https://github.com/Hack-DJ/jstool/blob/master/src/time/formatUnixTime.js
+
+[typeOf]:https://github.com/Hack-DJ/jstool/blob/master/src/type/typeOf.js
+
+[parseQueryString]:https://github.com/Hack-DJ/jstool/blob/master/src/url/parseQueryString.js
+[stringfyQueryString]:https://github.com/Hack-DJ/jstool/blob/master/src/url/stringfyQueryString.js
