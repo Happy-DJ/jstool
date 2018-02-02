@@ -5,13 +5,13 @@ describe('Dom API:', function () {
             length = 20;
         before(function () {
             $body.style.height = '10000px'
-            jstool.setScrollTop(length)
+            jstools.setScrollTop(length)
         })
-        it(`jstool.getScrollTop() should return true`, function () {
-            assert(jstool.getScrollTop() === length)
+        it(`jstools.getScrollTop() should return true`, function () {
+            assert(jstools.getScrollTop() === length)
         })
         after(function () {
-            jstool.setScrollTop(0)
+            jstools.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -22,14 +22,14 @@ describe('Dom API:', function () {
             length = 20;
         before(function () {
             $body.style.height = '10000px'
-            jstool.setScrollTop(length)
+            jstools.setScrollTop(length)
         })
-        it(`jstool.getScrollTop() should return true`, function () {
-            jstool.setScrollTop(length)
-            assert(jstool.getScrollTop() === length)
+        it(`jstools.getScrollTop() should return true`, function () {
+            jstools.setScrollTop(length)
+            assert(jstools.getScrollTop() === length)
         })
         after(function () {
-            jstool.setScrollTop(0)
+            jstools.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -45,8 +45,8 @@ describe('Dom API:', function () {
             document.body.appendChild(div)
             $ele = document.querySelector('#J_addClass')
         })
-        it(`jstool.offset() should return true`, function () {
-            let offset = jstool.offset($ele)
+        it(`jstools.offset() should return true`, function () {
+            let offset = jstools.offset($ele)
             assert(offset.left === 300 && offset.top === 200)
         })
         after(function () {
@@ -63,15 +63,15 @@ describe('Dom API:', function () {
         before(function () {
             $body.style.height = '10000px'
         })
-        it(`jstool.scrollTo() should return true`, function (done) {
-            jstool.scrollTo(y, duration)
+        it(`jstools.scrollTo() should return true`, function (done) {
+            jstools.scrollTo(y, duration)
             setTimeout(function () {
-                assert(jstool.getScrollTop() === y)
+                assert(jstools.getScrollTop() === y)
                 done()
             }, duration + 200)
         })
         after(function () {
-            jstool.setScrollTop(0)
+            jstools.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -79,8 +79,8 @@ describe('Dom API:', function () {
 
     describe('#windowResize()', function () {
         let innerHeight = window.innerHeight
-        it(`jstool.windowResize(downCb) should return true`, function (done) {
-            jstool.windowResize(function () {
+        it(`jstools.windowResize(downCb) should return true`, function (done) {
+            jstools.windowResize(function () {
                 // 键盘缩回回调
                 assert(window.innerHeight == innerHeight)
                 done()
@@ -92,8 +92,8 @@ describe('Dom API:', function () {
 
     describe('#windowResize()', function () {
         let innerHeight = window.innerHeight
-        it(`jstool.windowResize(upCb) should return true`, function (done) {
-            jstool.windowResize(function () {}, function () {
+        it(`jstools.windowResize(upCb) should return true`, function (done) {
+            jstools.windowResize(function () {}, function () {
                 // 键盘弹起回调
                 assert(window.innerHeight === innerHeight - 200)
                 done()
@@ -117,9 +117,9 @@ describe('Dom API:', function () {
             $ele = document.querySelector('#prefix')
         })
 
-        it(`jstool.prefixStyle() should return true`, function () {
-            const transform = jstool.prefixStyle('transform')
-            const transition = jstool.prefixStyle('transition')
+        it(`jstools.prefixStyle() should return true`, function () {
+            const transform = jstools.prefixStyle('transform')
+            const transition = jstools.prefixStyle('transition')
             $ele.style[transform] = 'translate3d(0, 0, 0)'
             $ele.style[transition] = 'all 0.4s ease'
              assert($ele.getAttribute('style')==='transform: translate3d(0px, 0px, 0px); transition: all 0.4s ease;')

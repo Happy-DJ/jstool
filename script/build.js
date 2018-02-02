@@ -14,18 +14,18 @@ new Promise((resolve, reject) => {
     // 构建全量压缩包
     let building = ora('building...')
     building.start()
-    rm(path.resolve(rootPath, 'min', `${pkg.name}.min.js`), err => {
+    rm(path.resolve(rootPath, 'min', 'jstools.min.js'), err => {
         if (err) throw (err)
         webpack(config, function (err, stats) {
             if (err) throw (err)
             building.stop()
             process.stdout.write(stats.toString({
-                colors: true,
-                modules: false,
-                children: false,
-                chunks: false,
-                chunkModules: false
-            }) + '\n\n')
+                    colors: true,
+                    modules: false,
+                    children: false,
+                    chunks: false,
+                    chunkModules: false
+                }) + '\n\n')
             resolve()
             console.log(chalk.cyan('  Build complete.\n'))
         })

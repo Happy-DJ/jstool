@@ -1,6 +1,6 @@
 describe('Object API:', function () {
     describe('#deepClone()', function () {
-        it(`person deepEqual jstool.deepClone(person) should return true`, function () {
+        it(`person deepEqual jstools.deepClone(person) should return true`, function () {
             let person = {
                 name: "user",
                 settings: {
@@ -8,10 +8,10 @@ describe('Object API:', function () {
                     second: [1, 2, 3, 4, 3]
                 }
             }
-            assert.deepEqual(person, jstool.deepClone(person))
+            assert.deepEqual(person, jstools.deepClone(person))
         });
 
-        it(`person === jstool.deepClone(person) should return false`, function () {
+        it(`person === jstools.deepClone(person) should return false`, function () {
             let person = {
                 name: "user",
                 settings: {
@@ -19,52 +19,52 @@ describe('Object API:', function () {
                     second: [1, 2, 3, 4, 3]
                 }
             }
-            assert.notEqual(person, jstool.deepClone(person))
+            assert.notEqual(person, jstools.deepClone(person))
         });
     });
 
     describe('#isEmptyObject()', function () {
-        it(`jstool.isEmptyObject({}) should return true`, function () {
-            assert(jstool.deepClone({}))
+        it(`jstools.isEmptyObject({}) should return true`, function () {
+            assert(jstools.deepClone({}))
         });
 
-        it(`jstool.isEmptyObject({ one: 1 }) should return false`, function () {
-            assert.notEqual(jstool.isEmptyObject({
+        it(`jstools.isEmptyObject({ one: 1 }) should return false`, function () {
+            assert.notEqual(jstools.isEmptyObject({
                 one: 1
             }))
         });
 
-        it(`jstool.isEmptyObject([]) should return false`, function () {
-            assert.notEqual(jstool.isEmptyObject([]))
+        it(`jstools.isEmptyObject([]) should return false`, function () {
+            assert.notEqual(jstools.isEmptyObject([]))
         });
     });
 
     describe('#isEmpty()', function () {
-        it(`jstool.isEmpty({}) should return true`, function () {
-            assert(jstool.deepClone({}))
+        it(`jstools.isEmpty({}) should return true`, function () {
+            assert(jstools.deepClone({}))
         });
 
-        it(`jstool.isEmpty({ one: 1 }) should return false`, function () {
-            assert.notEqual(jstool.isEmpty({
+        it(`jstools.isEmpty({ one: 1 }) should return false`, function () {
+            assert.notEqual(jstools.isEmpty({
                 one: 1
             }))
         });
 
-        it(`jstool.isEmpty([]) should return true`, function () {
-            assert.notEqual(jstool.isEmpty([]))
+        it(`jstools.isEmpty([]) should return true`, function () {
+            assert.notEqual(jstools.isEmpty([]))
         });
-        it(`jstool.isEmpty([1]) should return false`, function () {
-            assert.notEqual(jstool.isEmpty([1]))
+        it(`jstools.isEmpty([1]) should return false`, function () {
+            assert.notEqual(jstools.isEmpty([1]))
         });
-        it(`jstool.isEmpty('') should return true`, function () {
-            assert.notEqual(jstool.isEmpty(''))
+        it(`jstools.isEmpty('') should return true`, function () {
+            assert.notEqual(jstools.isEmpty(''))
         });
-        it(`jstool.isEmpty(null) should return true`, function () {
-            assert.notEqual(jstool.isEmpty(null))
+        it(`jstools.isEmpty(null) should return true`, function () {
+            assert.notEqual(jstools.isEmpty(null))
         });
-        it(`jstool.isEmpty(let test) should return true`, function () {
+        it(`jstools.isEmpty(let test) should return true`, function () {
             let test;
-            assert.notEqual(jstool.isEmpty(test))
+            assert.notEqual(jstools.isEmpty(test))
         });
     });
 })

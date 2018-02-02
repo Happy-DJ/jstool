@@ -7,9 +7,9 @@ describe('Class API:', function () {
             document.body.appendChild(div)
             $ele = document.querySelector('#J_addClass')
         })
-        it(`jstool.addClass($ele, 'test') should return true`, function () {
-            jstool.classApi.addClass($ele, 'test')
-            assert(jstool.classApi.hasClass($ele, 'test'))
+        it(`jstools.addClass($ele, 'test') should return true`, function () {
+            jstools.classApi.addClass($ele, 'test')
+            assert(jstools.classApi.hasClass($ele, 'test'))
         });
         after(function () {
             document.body.removeChild($ele)
@@ -23,10 +23,10 @@ describe('Class API:', function () {
             div.id = 'J_hasClass'
             document.body.appendChild(div)
             $ele = document.querySelector('#J_hasClass')
-            jstool.classApi.addClass($ele, 'test')
+            jstools.classApi.addClass($ele, 'test')
         })
-        it(`jstool.hasClass($ele, 'test') should return true`, function () {
-            assert(jstool.classApi.hasClass($ele, 'test'))
+        it(`jstools.hasClass($ele, 'test') should return true`, function () {
+            assert(jstools.classApi.hasClass($ele, 'test'))
         });
         after(function () {
             document.body.removeChild($ele)
@@ -40,11 +40,11 @@ describe('Class API:', function () {
             div.id = 'J_removeClass'
             document.body.appendChild(div)
             $ele = document.querySelector('#J_removeClass')
-            jstool.classApi.addClass($ele, 'test')
+            jstools.classApi.addClass($ele, 'test')
         })
-        it(`jstool.removeClass($ele, 'test') should return false`, function () {
-            jstool.classApi.removeClass($ele, 'test')
-            assert.notEqual(jstool.classApi.hasClass($ele, 'test'))
+        it(`jstools.removeClass($ele, 'test') should return false`, function () {
+            jstools.classApi.removeClass($ele, 'test')
+            assert.notEqual(jstools.classApi.hasClass($ele, 'test'))
         });
         after(function () {
             document.body.removeChild($ele)
