@@ -26,14 +26,10 @@ function prefixStyle(style) {
   if (vendor === false) {
     return false;
   }
-
   if (vendor === 'standard') {
     return style;
   }
   return vendor + style.charAt(0).toUpperCase() + style.substr(1);
-}
-
-module.exports = prefixStyle;yle.substr(1);
 }
 
 module.exports = prefixStyle;

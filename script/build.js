@@ -3,6 +3,7 @@ const fs = require('fs')
 const ora = require('ora')
 const rm = require('rimraf')
 const copy = require('copy')
+const copyfiles = require('copyfiles')
 const chalk = require('chalk')
 const webpack = require('webpack')
 
@@ -42,6 +43,7 @@ new Promise((resolve, reject) => {
         let folderList = fs.readdirSync(path.resolve(rootPath, 'babelLib'))
 
         folderList.forEach((item, index) => {
+
             copy(`babelLib/${item}/*.js`, path.resolve(rootPath, 'static'), function (err, files) {
                 if (err) throw err;
                 if (index === folderList.length - 1) {
@@ -49,6 +51,9 @@ new Promise((resolve, reject) => {
                     copying.stop()
                 }
             })
+
+
+
         })
 
     })

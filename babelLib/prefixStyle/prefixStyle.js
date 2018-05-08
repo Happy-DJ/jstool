@@ -26,7 +26,6 @@ function prefixStyle(style) {
   if (vendor === false) {
     return false;
   }
-
   if (vendor === 'standard') {
     return style;
   }
