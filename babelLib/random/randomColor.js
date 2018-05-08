@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * 
  * @desc 随机生成颜色

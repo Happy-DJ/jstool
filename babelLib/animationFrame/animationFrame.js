@@ -1,7 +1,9 @@
+"use strict";
+
 /**
  * @desc AnimationFrame简单兼容hack
  */
-const animationFrame = () => {
+var animationFrame = function animationFrame() {
   window.cancelAnimationFrame = function () {
     return window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.mozCancelAnimationFrame || window.oCancelAnimationFrame || window.msCancelAnimationFrame || function (id) {
       return window.clearTimeout(id);

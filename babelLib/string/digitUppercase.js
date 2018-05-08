@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * 
  * @desc   现金额转大写

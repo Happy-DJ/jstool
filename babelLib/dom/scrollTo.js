@@ -1,3 +1,5 @@
+'use strict';
+
 var getScrollTop = require('./getScrollTop');
 var setScrollTop = require('./setScrollTop');
 var requestAnimFrame = function () {

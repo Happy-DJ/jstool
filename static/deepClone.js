@@ -1,3 +1,7 @@
+"use strict";
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 /**
  * @desc 深拷贝，支持常见类型
  * @param {Any} values
@@ -6,7 +10,7 @@ function deepClone(values) {
     var copy;
 
     // Handle the 3 simple types, and null or undefined
-    if (null == values || "object" != typeof values) return values;
+    if (null == values || "object" != (typeof values === "undefined" ? "undefined" : _typeof(values))) return values;
 
     // Handle Date
     if (values instanceof Date) {

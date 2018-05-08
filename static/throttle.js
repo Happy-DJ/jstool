@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * @desc   函数节流。
  * 适用于限制`resize`和`scroll`等函数的调用频率

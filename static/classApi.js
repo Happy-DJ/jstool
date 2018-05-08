@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * @desc   classApi
  |*|  * classApi.isElement(el)
@@ -7,27 +9,27 @@
  |*|  * classApi.toggleClass(el,cls)
  */
 
-const classApi = {
-  isElement: function (el) {
+var classApi = {
+  isElement: function isElement(el) {
     return el && el.nodeType === Node.ELEMENT_NODE;
   },
-  hasClass: function (el, cls) {
+  hasClass: function hasClass(el, cls) {
     return new RegExp('(\\s|^)' + cls + '(\\s|$)').test(el.className);
   },
-  addClass: function (el, cls) {
+  addClass: function addClass(el, cls) {
     if (!this.hasClass(el, cls)) {
       el.className += ' ' + cls;
     }
   },
-  removeClass: function (el, cls) {
+  removeClass: function removeClass(el, cls) {
     if (this.hasClass(el, cls)) {
-      let reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+      var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
       el.className = el.className.replace(reg, ' ');
     }
   },
-  toggleClass: function (el, cls) {
+  toggleClass: function toggleClass(el, cls) {
     if (this.hasClass(el, cls)) {
-      let reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+      var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
       el.className = el.className.replace(reg, ' ');
     } else {
       el.className += ' ' + cls;

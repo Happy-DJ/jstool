@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * 
  * @desc   格式化现在距${endTime}的剩余时间

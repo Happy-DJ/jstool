@@ -1,7 +1,7 @@
 {
   "name": "dj-jstools",
-  "minName":"jstools",
-  "version": "1.2.0",
+  "minName": "jstools",
+  "version": "1.2.2",
   "description": "前端业务代码工具库",
   "main": "min/jstools.min.js",
   "scripts": {
@@ -22,8 +22,8 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "chalk": "^2.3.0",

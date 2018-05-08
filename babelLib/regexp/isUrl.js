@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * 
  * @desc   判断是否为URL地址

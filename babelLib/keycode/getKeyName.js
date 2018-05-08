@@ -1,3 +1,5 @@
+'use strict';
+
 var keyCodeMap = {
     8: 'Backspace',
     9: 'Tab',

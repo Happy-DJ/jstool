@@ -1,125 +1,127 @@
+'use strict';
+
 /**
  * @desc webpack打包入口文件
  */
-const animationFrame = require('./animationFrame/animationFrame');
+var animationFrame = require('./animationFrame/animationFrame');
 
-const arrayEqual = require('./array/arrayEqual');
+var arrayEqual = require('./array/arrayEqual');
 
-const classApi = require('./class/classApi');
-const cookieApi = require('./cookie/cookie');
+var classApi = require('./class/classApi');
+var cookieApi = require('./cookie/cookie');
 
-const shuffle = require('./collections/shuffle');
+var shuffle = require('./collections/shuffle');
 
-const getOS = require('./device/getOS');
-const isWeixin = require('./device/isWeixin');
-const getType = require('./device/getType');
-const getExplore = require('./device/getExplore');
-const mobileType = require('./device/mobileType');
+var getOS = require('./device/getOS');
+var isWeixin = require('./device/isWeixin');
+var getType = require('./device/getType');
+var getExplore = require('./device/getExplore');
+var mobileType = require('./device/mobileType');
 
-const scrollApi = require('./dom/scrollApi');
-const getScrollTop = require('./dom/getScrollTop');
-const offset = require('./dom/offset');
-const scrollTo = require('./dom/scrollTo');
-const setScrollTop = require('./dom/setScrollTop');
-const windowResize = require('./dom/windowResize');
+var scrollApi = require('./dom/scrollApi');
+var getScrollTop = require('./dom/getScrollTop');
+var offset = require('./dom/offset');
+var scrollTo = require('./dom/scrollTo');
+var setScrollTop = require('./dom/setScrollTop');
+var windowResize = require('./dom/windowResize');
 
-const debounce = require('./function/debounce');
-const throttle = require('./function/throttle');
+var debounce = require('./function/debounce');
+var throttle = require('./function/throttle');
 
-const getKeyName = require('./keycode/getKeyName');
+var getKeyName = require('./keycode/getKeyName');
 
-const deepClone = require('./object/deepClone');
-const isEmptyObject = require('./object/isEmptyObject');
-const isEmpty = require('./object/isEmpty');
+var deepClone = require('./object/deepClone');
+var isEmptyObject = require('./object/isEmptyObject');
+var isEmpty = require('./object/isEmpty');
 
-const prefixStyle = require('./prefixStyle/prefixStyle');
+var prefixStyle = require('./prefixStyle/prefixStyle');
 
-const randomColor = require('./random/randomColor');
-const randomNum = require('./random/randomNum');
+var randomColor = require('./random/randomColor');
+var randomNum = require('./random/randomNum');
 
-const isEmail = require('./regexp/isEmail');
-const isIdCard = require('./regexp/isIdCard');
-const isPhoneNum = require('./regexp/isPhoneNum');
-const isUrl = require('./regexp/isUrl');
-const priceSubstr = require('./regexp/priceSubstr');
+var isEmail = require('./regexp/isEmail');
+var isIdCard = require('./regexp/isIdCard');
+var isPhoneNum = require('./regexp/isPhoneNum');
+var isUrl = require('./regexp/isUrl');
+var priceSubstr = require('./regexp/priceSubstr');
 
-const secretInfo = require('./secret/secretInfo');
+var secretInfo = require('./secret/secretInfo');
 
-const digitUppercase = require('./string/digitUppercase');
+var digitUppercase = require('./string/digitUppercase');
 
-const localStorageApi = require('./stroge/localStorage');
+var localStorageApi = require('./stroge/localStorage');
 
-const isSupportWebP = require('./support/isSupportWebP');
+var isSupportWebP = require('./support/isSupportWebP');
 
-const formatPassTime = require('./time/formatPassTime');
-const formatRemainTime = require('./time/formatRemainTime');
-const formatTime = require('./time/formatTime');
-const formatUnixTime = require('./time/formatUnixTime');
+var formatPassTime = require('./time/formatPassTime');
+var formatRemainTime = require('./time/formatRemainTime');
+var formatTime = require('./time/formatTime');
+var formatUnixTime = require('./time/formatUnixTime');
 
-const parseQueryString = require('./url/parseQueryString');
-const stringfyQueryString = require('./url/stringfyQueryString');
+var parseQueryString = require('./url/parseQueryString');
+var stringfyQueryString = require('./url/stringfyQueryString');
 
-const typeOf = require('./type/typeOf');
+var typeOf = require('./type/typeOf');
 
 module.exports = {
-    animationFrame,
+    animationFrame: animationFrame,
 
-    arrayEqual,
+    arrayEqual: arrayEqual,
 
-    classApi,
+    classApi: classApi,
 
-    cookieApi,
+    cookieApi: cookieApi,
 
-    shuffle,
+    shuffle: shuffle,
 
-    isWeixin,
-    getOS,
-    getExplore,
-    getType,
-    mobileType,
+    isWeixin: isWeixin,
+    getOS: getOS,
+    getExplore: getExplore,
+    getType: getType,
+    mobileType: mobileType,
 
-    scrollApi,
-    getScrollTop,
-    offset,
-    scrollTo,
-    setScrollTop,
-    windowResize,
+    scrollApi: scrollApi,
+    getScrollTop: getScrollTop,
+    offset: offset,
+    scrollTo: scrollTo,
+    setScrollTop: setScrollTop,
+    windowResize: windowResize,
 
-    prefixStyle,
+    prefixStyle: prefixStyle,
 
-    debounce,
-    throttle,
+    debounce: debounce,
+    throttle: throttle,
 
-    getKeyName,
+    getKeyName: getKeyName,
 
-    deepClone,
-    isEmptyObject,
-    isEmpty,
+    deepClone: deepClone,
+    isEmptyObject: isEmptyObject,
+    isEmpty: isEmpty,
 
-    randomColor,
-    randomNum,
+    randomColor: randomColor,
+    randomNum: randomNum,
 
-    isEmail,
-    isIdCard,
-    isPhoneNum,
-    isUrl,
-    priceSubstr,
+    isEmail: isEmail,
+    isIdCard: isIdCard,
+    isPhoneNum: isPhoneNum,
+    isUrl: isUrl,
+    priceSubstr: priceSubstr,
 
-    secretInfo,
+    secretInfo: secretInfo,
 
-    digitUppercase,
+    digitUppercase: digitUppercase,
 
-    isSupportWebP,
+    isSupportWebP: isSupportWebP,
 
-    formatPassTime,
-    formatRemainTime,
-    formatTime,
-    formatUnixTime,
+    formatPassTime: formatPassTime,
+    formatRemainTime: formatRemainTime,
+    formatTime: formatTime,
+    formatUnixTime: formatUnixTime,
 
-    localStorageApi,
+    localStorageApi: localStorageApi,
 
-    parseQueryString,
-    stringfyQueryString,
+    parseQueryString: parseQueryString,
+    stringfyQueryString: stringfyQueryString,
 
-    typeOf
+    typeOf: typeOf
 };

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * @desc   给隐私信息标记号加密
  * @param  {String} personInfo
@@ -5,9 +7,13 @@
  * @param  {Number} right
  * @param  {String} replace
  */
-const typeOf = require('../type/typeOf');
+var typeOf = require('../type/typeOf');
 
-const secretInfo = (personInfo, left = 3, right = 3, replace = '*') => {
+var secretInfo = function secretInfo(personInfo) {
+  var left = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
+  var right = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 3;
+  var replace = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '*';
+
   if (typeOf(personInfo) === 'Number') {
     personInfo = '' + personInfo;
   }
@@ -17,9 +23,9 @@ const secretInfo = (personInfo, left = 3, right = 3, replace = '*') => {
   if (personInfo.length < 7) {
     throw new Error('参数长度需要大于7');
   }
-  let reg = new RegExp('^([a-zA-Z\\d]{' + left + '})([a-zA-Z\\d]+)([a-zA-Z\\d]{' + right + '})$');
+  var reg = new RegExp('^([a-zA-Z\\d]{' + left + '})([a-zA-Z\\d]+)([a-zA-Z\\d]{' + right + '})$');
   return personInfo.replace(reg, function (x, y, z, p) {
-    let i = '';
+    var i = '';
     while (i.length < z.length) {
       i += replace;
     }

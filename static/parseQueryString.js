@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * 
  * @desc   url参数转对象

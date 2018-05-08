@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * 
  * @desc   对象序列化

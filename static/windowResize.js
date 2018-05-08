@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * 
  * @desc H5软键盘缩回、弹起回调
@@ -10,7 +12,7 @@ function windowResize(downCb, upCb) {
 	var clientHeight = window.innerHeight;
 	downCb = typeof downCb === 'function' ? downCb : function () {};
 	upCb = typeof upCb === 'function' ? upCb : function () {};
-	window.addEventListener('resize', () => {
+	window.addEventListener('resize', function () {
 		var height = window.innerHeight;
 		if (height === clientHeight) {
 			downCb();

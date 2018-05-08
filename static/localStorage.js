@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * @desc   localStroge/sessionStroge缓存
  * @param  {String} key 键名
@@ -5,19 +7,21 @@
  * @param  {Date} time 过期时间
  */
 
-const localStorageApi = {
+var localStorageApi = {
   // time有效期 默认是半小时传入ms
-  set: function (key, val, time = +new Date() + 0.5 * 3600 * 1000) {
-    let cacheVal = {
+  set: function set(key, val) {
+    var time = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : +new Date() + 0.5 * 3600 * 1000;
+
+    var cacheVal = {
       val: val,
       exp: time
     };
     localStorage.setItem(key, JSON.stringify(cacheVal));
   },
-  get: function (key) {
-    let cacheVal = localStorage.getItem(key);
+  get: function get(key) {
+    var cacheVal = localStorage.getItem(key);
     if (!cacheVal) return '';
-    let result = JSON.parse(cacheVal);
+    var result = JSON.parse(cacheVal);
     if (+new Date() > result.exp) {
       //缓存过期
       this.remove(key);
@@ -25,10 +29,10 @@ const localStorageApi = {
     }
     return result.val;
   },
-  remove: function (key) {
+  remove: function remove(key) {
     localStorage.removeItem(key);
   },
-  clear: function () {
+  clear: function clear() {
     localStorage.clear();
   }
 };

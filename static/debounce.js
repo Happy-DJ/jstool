@@ -1,3 +1,5 @@
+'use strict';
+
 var throttle = require('./throttle');
 
 /**

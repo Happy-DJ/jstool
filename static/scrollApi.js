@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * @desc  scroll滚动方法
  |*|  * scrollApi.getScrollTop()
@@ -10,29 +12,33 @@ var requestAnimationFrame = function () {
   };
 }();
 
-const scrollApi = {
-  getScrollTop: function () {
+var scrollApi = {
+  getScrollTop: function getScrollTop() {
     return document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
   },
-  setScrollTop: function (h) {
+  setScrollTop: function setScrollTop(h) {
     h && window.scrollTo(0, h);
   },
-  scrollTo: function (to, duration = 0) {
-    let diff = to - this.getScrollTop();
+  scrollTo: function scrollTo(to) {
+    var _this = this;
+
+    var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+    var diff = to - this.getScrollTop();
     if (diff === 0) return;
     if (duration <= 0) {
       this.setScrollTop(to);
       return;
     }
-    let step = diff / duration * 10;
-    requestAnimationFrame(() => {
+    var step = diff / duration * 10;
+    requestAnimationFrame(function () {
       if (Math.abs(step) > Math.abs(diff)) {
-        this.setScrollTop(this.getScrollTop() + diff);
+        _this.setScrollTop(_this.getScrollTop() + diff);
         return;
       }
-      this.setScrollTop(this.getScrollTop() + step);
-      if (diff > 0 && this.getScrollTop() >= to || diff < 0 && this.getScrollTop() <= to) return;
-      this.scrollTo(to, duration - 16);
+      _this.setScrollTop(_this.getScrollTop() + step);
+      if (diff > 0 && _this.getScrollTop() >= to || diff < 0 && _this.getScrollTop() <= to) return;
+      _this.scrollTo(to, duration - 16);
     });
   }
 };
