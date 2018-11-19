@@ -45,17 +45,20 @@ const OS = getOS()
 ```
 
 **项目构建**
-### 编译ES6转ES5 npm run jsBabel
-### 重新编译脚本  npm run build
-### 测试代码  npm run test
-
-
-
-
-
+### 编译ES6转ES5 
+npm run jsBabel
+### 重新编译脚本  
+npm run build
+### 测试代码 
+ npm run test
 
 
 ## API文档
+
+### Heikuai
+#### &emsp;&emsp;[heikuai][heikuai]&emsp;&emsp;嘿快常用功能
+##### &emsp;&emsp;&emsp;&emsp;heikuai.getUserAccount() //获取当前用户
+##### &emsp;&emsp;&emsp;&emsp;heikuai.isApp() //是否在嘿快app内
 
 ### Array
 #### &emsp;&emsp;[arrayEqual][arrayEqual]&emsp;&emsp;判断两个数组是否相等
@@ -63,10 +66,10 @@ const OS = getOS()
 ### Class
 #### &emsp;&emsp;[classApi][classApi]&emsp;&emsp;className的操作api
 ##### &emsp;&emsp;&emsp;&emsp;classApi.isElement(el) //是否元素节点
-##### &emsp;&emsp;&emsp;&emsp;classApi.hasClass(el,cls)
-##### &emsp;&emsp;&emsp;&emsp;classApi.addClass(el,cls)
-##### &emsp;&emsp;&emsp;&emsp;classApi.removeClass(el,cls)
-##### &emsp;&emsp;&emsp;&emsp;classApi.toggleClass(el,cls)
+##### &emsp;&emsp;&emsp;&emsp;classApi.hasClass(el,cls) //是否是否存在class
+##### &emsp;&emsp;&emsp;&emsp;classApi.addClass(el,cls) // 添加class
+##### &emsp;&emsp;&emsp;&emsp;classApi.removeClass(el,cls) // 移除class
+##### &emsp;&emsp;&emsp;&emsp;classApi.toggleClass(el,cls) // 交替class
 
 ### animationFrame
 #### &emsp;&emsp;[animationFrame][animationFrame]&emsp;&emsp;AnimationFrame简单兼容hack
@@ -155,8 +158,9 @@ const OS = getOS()
 
 ### Type
 #### &emsp;&emsp;[type][typeOf]&emsp;&emsp;判断类型
+[heikuai]:https://github.com/Hack-DJ/jstool/blob/master/src/heikuai/heikuai.js
 
-
+[animationFrame]:https://github.com/Hack-DJ/jstool/blob/master/src/animationFrame/animationFrame.js
 [arrayEqual]:https://github.com/Hack-DJ/jstool/blob/master/src/array/arrayEqual.js
 
 [classApi]:https://github.com/Hack-DJ/jstool/blob/master/src/class/classApi.js
@@ -168,7 +172,7 @@ const OS = getOS()
 [getExplore]:https://github.com/Hack-DJ/jstool/blob/master/src/device/getExplore.js
 [getOS]:https://github.com/Hack-DJ/jstool/blob/master/src/device/getOS.js
 [getType]:https://github.com/Hack-DJ/jstool/blob/master/src/device/getType.js
-[isWerixin]:https://github.com/Hack-DJ/jstool/blob/master/src/device/isWeixin.js
+[isWeixin]:https://github.com/Hack-DJ/jstool/blob/master/src/device/isWeixin.js
 [mobileType]:https://github.com/Hack-DJ/jstool/blob/master/src/device/mobileType.js
 
 [getScrollTop]:https://github.com/Hack-DJ/jstool/blob/master/src/dom/getScrollTop.js

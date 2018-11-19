@@ -1,7 +1,7 @@
 {
   "name": "dj-jstools",
   "minName": "jstools",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "前端业务代码工具库",
   "main": "min/jstools.min.js",
   "scripts": {
